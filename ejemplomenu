@@ -1,0 +1,43 @@
+// ejemplomenu.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main ()
+{
+	float a,b,r;
+	int opcion;
+	cout<< "ingresar el valor de a :";
+	cin>>a;
+	cout<< "ingresar el valor de b :";
+	cin>>b;
+	do{
+		cout<<"    menu    "<<endl;
+		cout<<"1.-suma"<<endl;
+		cout<<"2.-resta"<<endl;
+		cout<<"3.-multiplicacion"<<endl;
+		cout<<"4.-division"<<endl;
+		cout<<"0.-salir del programa";
+		cout<<"elija una opcion"<<endl;
+		cin>> opcion;
+		 switch (opcion) {
+	    case 1: r = a + b;
+			break;
+	    case 2: r = a - b;
+			break;
+	    case 3: r = a * b;
+			break;
+	    case 4: r = a / b; 
+			break;
+		case 0: cout << "Salir";
+			break;
+	    default: cout << "Opcion invalida" << endl;
+     }
+     cout << "El resultado es " << r << endl;
+	 } while (opcion != 0);
+     _getch();
+}
+
